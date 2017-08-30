@@ -1,0 +1,86 @@
+<div class="container mt20">
+    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 lh80">
+        <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1">
+            <a href="#" ng-click="allfn()" class="pd10">全部</a>
+        </div>
+
+        <a class="mgrt20" href="#" ng-click="clicktype(pat)" ng-repeat="pat in arrtype">{{pat}}</a>
+               <!--暂时无效<a class="mgrt20" href="#" ng-click="fntest(pat)" ng-repeat="pat in pattern2">{{pat.name}}</a>-->
+        <!--<a class="mgrt20" href="#" ng-click="fntest(listpage2)" ng-repeat="listpage2 in listpages">{{listpage2.type}}</a>-->
+
+    </div>
+    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 lh60">
+        <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1">
+            <a class="pd10">筹资中</a>
+        </div>
+        <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1">
+            <a>即将结束</a>
+        </div>
+        <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1">
+            <a>筹资中</a>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 lh60">
+        <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1">
+            <a class="pd10">最新</a>
+        </div>
+        <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1">
+            <a>热门</a>
+        </div>
+        <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1">
+            <a>结束时间</a>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div ng-repeat="item in listData | filter:orderna"
+             class="col-xs-4 col-md-4 col-sm-4 col-lg-4 clearfix" style="height: 490px; border:1px solid #e6e6e6">
+
+            <div class="col-sm-12 col-lg-12">
+                <img class="img-responsive img-rounded" src="{{item.img}}">
+            </div>
+            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                <h4>{{item.name}}</h4>
+                <p>by{{item.fname}}</p>
+                <p class="pcolle">{{item.desc}}</p>
+                <i class="fa fa-tag" aria-hidden="true"></i><span class="mgrt20">话剧</span>
+                <i class="fa fa-television" aria-hidden="true"></i><span>卫视推荐</span>
+                <div class="progress mt10" style="height: 10px">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{item.sp}}" aria-valuemin="0"
+                         aria-valuemax="100" ng-style="{width:(item.rprice/item.placement)*100+'%'}" style="height: 10px">
+                    </div>
+                </div>
+                <div class="col-xs-3 col-md-3 col-sm-3 col-lg-3">
+                    <p><span>{{item.sp}}%</span></p>
+                    <p>进度</p>
+                </div>
+                <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+                    <p><i class="fa fa-jpy" aria-hidden="true"></i>{{item.rprice}}</p>
+                    <p>支持金额</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="myPage col-lg-12 text-center mt20 marginbt20">
+	        <span class="btncolor" ng-repeat="p in arr" style=" padding: 10px 20px;display: inline-block;"
+                  ng-click="changePage($index+1)" ng-class="{active2: $index+1==page}">{{p}}</span>
+    </div>
+
+   <!-- <div class="list">
+        <h3>项目列表</h3>
+        <ul>
+            <li ng-repeat="item in listData">
+                <h5>{{item.name}}</h5>
+                <img ng-src="{{item.img}}" alt="" width="150px;">
+            </li>
+        </ul>
+
+        <div class="myPage">
+	        <span ng-repeat="p in arr" style="display: inline-block; width:30px;border: 1px solid #ddd;"
+                  ng-click="changePage($index+1)" ng-class="{active2: $index+1==page}">{{p}}</span>
+        </div>
+    </div>-->
+</div>

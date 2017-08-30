@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <link rel="stylesheet" href="lib/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/all.css">
+
+
+
+</head>
+<body ng-app="myApp" class="backgray">
+<header>
+    <nav class="navbar navbar-default hdht70">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand fs26 fw600" href="#">全民<span class="red fw600 fs26">创造</span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav bdright">
+                    <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#" style="color: black">节目专栏</a></li>
+                    <li>
+                        <a href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color: black">圈子</a>
+
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+
+
+                        <div class="input-group">
+
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Search">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li><a ui-sref="login" style="color: black">登录</a></li>
+                    <li>
+                        <a ui-sref="reg" style="color: black">注册</a>
+                    </li>-->
+                    <li ng-if="!loginUser&&!regUser">
+                        <a ui-sref="login" style="color: black">登录</a>
+
+                    </li>
+                    <li ng-if="!loginUser&&!regUser">
+                        <a ui-sref="reg" style="color: black">注册</a>
+                    </li>
+                    <li ng-if="loginUser">
+                        <a ui-sref="pcenter.mypage" style="color: black ">{{loginUser.phone}}</a>
+                    </li>
+                    <li ng-if="loginUser">
+                        <a class="out" ui-sref="logout"  style="color: black">退出</a>
+                    </li>
+
+                    <li ng-if="regUser">
+                        <a ui-sref="login" style="color: black">{{regUser}}</a>
+                    </li>
+                    <li ng-if="regUser">
+                        <a ui-sref="home" style="color: black">退出</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+</header>
+
+<ui-view></ui-view>
+
+<footer>
+
+    <div class="container-fluid foot2">
+
+            <div class="container foot2">
+
+
+                <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6" style="">
+                    <a style="line-height: 97px; color: #606060;">关于全民创造</a>
+                    <a style="line-height: 97px;" class="red">全民创造用户协议</a>
+                    <a style="color: #606060;line-height: 97px">全民创造风险提示</a>
+                    <a style="color: #606060;line-height: 97px">联系我们</a>
+                </div>
+                <div class="col-xs-12 col-sm-2 col-sm-offset-4 foot2">
+                    <a class="fs26 fw600" href="#" style="line-height: 97px; color: #fff">全民<span class="red fw600 fs26">创造</span></a>
+                    <span style="color: #606060;">©2015</span>
+                </div>
+            </div>
+
+
+    </div>
+
+</footer>
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-ui-router.min.js"></script>
+<script src="lib/jquery-1.11.1.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="js/all.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+.hdht70{
+    height: 70px;
+}
+.fw600{
+    font-weight: 600;
+}
+.hpblack{
+    color: black;
+}
+.bdright{
+    border-right: 1px solid #e4e4e4;
+}
+
+.fs26{
+    font-size: 26px;
+}
+.error{
+    color: red;
+}
+input.error{
+    border: 1px solid red;
+}
+.has-success input{
+    border: 2px solid green;
+}
+.pos{
+    position: relative;top: -26px; right:-92%; color: green;
+}
+.myHei{
+    height: 60px;
+}
+.poserror{
+    position: relative;top: -26px; right:-92%; color: red;
+}
+.thirdlog{
+     display: block;width: 120px; text-align: center
+}
+.backgray{
+    background: #f7fafa;
+}
+.borderbt{
+    border-bottom: 2px solid #e4e4e4
+}
+
+.fa-weixin,.fa-qq,.fa-weibo{ font-size:20px; padding: 7px;  border: 1px solid gray; margin: 5px; border-radius: 50%;}
+
+
+/*字体颜色*/
+.green{
+    color: green;
+}
+.blue{
+    color: cornflowerblue;
+}
+.red{
+    color: #ff4200;
+}
+/*顶部距离*/
+.mt10{
+    margin-top: 10px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt30{
+    margin-top: 30px;
+}
+.mt40{
+    margin-top: 40px;
+}
+.mgb15{
+    margin-bottom: -15px;
+}
+.padbtm{
+    padding-bottom: 20px;
+}
+/*图标样式*/
+.weixin{
+    color: #02bb00; border-color: #02bb00;
+}
+.tencent{
+    color: #4f94cf;  border-color: #4f94cf;
+}
+.xinlang{
+    color: #db2920;  border-color: #db2920;
+}
+/*行高*/
+.lh30{
+    line-height: 30px;
+}
+.lh40{
+    line-height: 40px;
+}
+.lh60{
+    line-height: 60px;
+}
+.lh80{
+    line-height: 80px;
+}
+.lh50{
+    line-height: 42px;
+}
+/*边框*/
+.bd1{
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+}
+/*消除margin*/
+.clmg15{
+    margin: 20px -15px -15px;
+}
+/*背景颜色*/
+.bge4{
+    background: #e4e4e4;
+}
+.backfff{
+    background: #fff;
+}
+
+.foot2{
+     background: #150b09;
+}
+.mgrt20{
+    margin-right: 20px;
+}
+
+.bodlf{
+    border-left: 1px solid #e6e6e6;
+}
+.secmv{
+    color: orangered;
+
+}
+.sebodlf{
+    border-left: 2px solid orangered;
+}
+
+.mrlf10{
+    margin-left: -15px;
+}
+.pdtp20{
+    padding-top: 20px;
+}
+.pcolle{
+
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+}
+.fs18{
+    font-size: 18px;
+}
+
+.pd10{
+    padding: 10px;
+    background: orangered;
+    color: #fff;
+}
+.mgrt10{
+    margin-right: 10px;
+}
+
+.active2{
+    background: orangered;
+    padding: 10px 30px;
+    border:1px solid orangered;
+    border-radius: 5px;
+    color: #fff;
+
+}
+.btncolor{
+    border:1px solid #e6e6e6;text-align: center;
+    margin-left: -1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.marginbt20{
+    margin-bottom: 20px;
+}
+.cennormal{
+    border-bottom: 1px dashed #e6e6e6;
+    padding: 4px;
+}
+.cenactive{
+    color: orangered;
+    border-color: orangered;
+}
+li{
+    list-style: none;
+}
+a:hover{
+    text-decoration:none;
+}

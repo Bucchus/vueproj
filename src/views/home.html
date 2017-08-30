@@ -1,0 +1,292 @@
+<div ng-controller="HomeController">
+
+    <div class="container">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+
+            </ol>
+
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img class="img-responsive" src="{{slides[0].img}}" alt="...">
+
+                </div>
+                <div class="item">
+                    <img src="{{slides[1].img}}" alt="sss">
+                    <div class="carousel-caption">
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+
+    </div>
+
+    <div class="container">
+        <div class=" pdtp20">
+            <div class="col-xs-10 col-md-10 col-sm-10 col-lg-10 ">
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 fw600">
+                    <dl class="dl-horizontal lh40">
+                        <dt><h4 class="lh80" style="font-weight: 800">热门项目</h4></dt>
+                        <dd class="text-right"><a ui-sref="mvlist" class="lh80" style="font-weight: normal">查看更多</a></dd>
+                    </dl>
+                </div>
+
+                <div class="col-xs-5 col-md-5 col-sm-5 col-lg-5 ">
+                    <img class="img-responsive" src="{{hot[2].img}}">
+                </div>
+
+                <div class="col-xs-7 col-md-7 col-sm-7 col-lg-7">
+                    <h4>{{hot[2].name}}</h4>
+                    <p>by{{hot[2].fname}}</p>
+                    <p>{{hot[2].desc}}</p>
+                    <i class="fa fa-tag" aria-hidden="true"></i><span class="mgrt20">话剧</span>
+                    <i class="fa fa-television" aria-hidden="true"></i><span>卫视推荐</span>
+                    <div class="progress mt10" style="height: 10px">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{hot[2].sp}}" aria-valuemin="0"
+                             aria-valuemax="100" ng-style="{width:(hot[2].rprice/hot[2].placement)*100+'%'}" style="height: 10px">
+                        </div>
+                    </div>
+                    <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2">
+                        <p><span class="fw600 fs18">{{hot[2].sp}}%</span></p>
+                        <p>进度</p>
+                    </div>
+                    <div class="col-xs-3 col-md-3 col-sm-3 col-lg-3">
+                        <p class="fw600 fs18"><i class="fa fa-jpy" aria-hidden="true"></i>{{hot[2].rprice}}</p>
+                        <p>支持金额</p>
+                    </div>
+
+                    <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2">
+                        <p class="fw600 fs18">{{hot[2].rnum}}</p>
+                        <p>支持者</p>
+                    </div>
+                    <div class="col-xs-3 col-md-3 col-sm-3 col-lg-3">
+                        <p class="fw600 fs18">{{hot[2].rday}}</p>
+                        <p>剩余天数</p>
+                    </div>
+                    <!--<div class="col-xs-2 col-md-2 col-sm-2 col-lg-2">
+                        <p><i class="fa fa-jpy" aria-hidden="true"></i>{{hot[2].placement}}</p>
+                        <p>总金额</p>
+                    </div>-->
+
+                </div>
+            </div>
+            <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 bodlf">
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 mrlf10 text-center">
+                    <a class="lh50">微电影</a>
+                </div>
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 mrlf10 text-center">
+                    <a class="lh50">电影</a>
+                </div>
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 mrlf10 text-center">
+                    <a class="lh50">电视剧</a>
+                </div>
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 mrlf10 text-center">
+                    <a class="lh50">传统戏曲</a>
+                </div>
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 sebodlf mrlf10 text-center">
+                    <a class="lh50 secmv">话剧</a>
+                </div>
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 mrlf10 text-center">
+                    <a class="lh50">书画</a>
+                </div>
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 mrlf10 text-center">
+                    <a class="lh50">相声</a>
+                </div>
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 mrlf10 text-center">
+                    <a class="lh50">戏剧</a>
+                </div>
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 mrlf10 text-center">
+                    <a class="lh50">音乐剧</a>
+                </div>
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 mrlf10 text-center">
+                    <a class="lh50">纪录片</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container" style="background: #fff; border-bottom: 1px solid #e4e4e4; border-top: 1px solid #e4e4e4;">
+        <div class=" pdtp20">
+            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 ">
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 fw600">
+                    <dl class="dl-horizontal lh40">
+                        <dt><h4 class="lh80" style="font-weight: 800">卫视主推</h4></dt>
+                        <dd class="text-right"><span class="lh80" style="font-weight: normal">查看更多</span></dd>
+                    </dl>
+                </div>
+<div class="col-md-12 col-sm-12 col-lg-12">
+    <div class="col-xs-12 col-md-12 col-sm-4 col-lg-4 "
+         style=" padding: 0px;">
+
+        <div class="col-lg-12">
+            <img class="img-responsive img-rounded" src="{{new[0].img}}">
+        </div>
+
+        <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+            <h4>{{new[0].name}}</h4>
+            <p>by{{new[0].fname}}</p>
+            <p>{{new[0].desc}}</p>
+            <i class="fa fa-tag" aria-hidden="true"></i><span class="mgrt20">话剧</span>
+            <i class="fa fa-television" aria-hidden="true"></i><span>卫视推荐</span>
+            <div class="progress mt10" style="height: 10px">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{new[0].sp}}" aria-valuemin="0"
+                     aria-valuemax="100" ng-style="{width:(new[0].rprice/new[0].placement)*100+'%'}" style="height: 10px">
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-3 col-sm-3 col-lg-3">
+                <p><span>{{new[0].sp}}%</span></p>
+                <p>进度</p>
+            </div>
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+                <p><i class="fa fa-jpy" aria-hidden="true"></i>{{new[0].rprice}}</p>
+                <p>支持金额</p>
+            </div>
+
+
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+                <p>{{new[0].rday}}</p>
+                <p>剩余天数</p>
+            </div>
+            <!--<div class="col-xs-2 col-md-2 col-sm-2 col-lg-2">
+                <p><i class="fa fa-jpy" aria-hidden="true"></i>{{hot[2].placement}}</p>
+                <p>总金额</p>
+            </div>-->
+
+        </div>
+
+    </div>
+
+    <div class="col-xs-12 col-md-12 col-sm-4 col-lg-4 "
+         style=" padding: 0px;">
+        <div class="col-sm-12 col-lg-12">
+            <img class="img-responsive img-rounded" src="{{new[2].img}}">
+        </div>
+
+        <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+            <h4>{{new[2].name}}</h4>
+            <p>by{{new[2].fname}}</p>
+            <p class="pcolle">{{new[2].desc}}</p>
+            <i class="fa fa-tag" aria-hidden="true"></i><span class="mgrt20">话剧</span>
+            <i class="fa fa-television" aria-hidden="true"></i><span>卫视推荐</span>
+            <div class="progress mt10" style="height: 10px">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{new[2].sp}}" aria-valuemin="0"
+                     aria-valuemax="100" ng-style="{width:(new[2].rprice/new[2].placement)*100+'%'}" style="height: 10px">
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-3 col-sm-3 col-lg-3">
+                <p><span>{{new[2].sp}}%</span></p>
+                <p>进度</p>
+            </div>
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+                <p><i class="fa fa-jpy" aria-hidden="true"></i>{{new[2].rprice}}</p>
+                <p>支持金额</p>
+            </div>
+
+
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+                <p>{{new[2].rday}}</p>
+                <p>剩余天数</p>
+            </div>
+            <!--<div class="col-xs-2 col-md-2 col-sm-2 col-lg-2">
+                <p><i class="fa fa-jpy" aria-hidden="true"></i>{{hot[2].placement}}</p>
+                <p>总金额</p>
+            </div>-->
+
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-md-12 col-sm-4 col-lg-4 "
+         style=" padding: 0px;">
+        <div class="col-sm-12 col-lg-12">
+            <img class="img-responsive img-rounded" src="{{new[1].img}}">
+        </div>
+
+        <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+            <h4>{{new[1].name}}</h4>
+            <p>by{{new[1].fname}}</p>
+            <p class="pcolle">{{new[1].desc}}</p>
+            <i class="fa fa-tag" aria-hidden="true"></i><span class="mgrt20">话剧</span>
+            <i class="fa fa-television" aria-hidden="true"></i><span>卫视推荐</span>
+            <div class="progress mt10" style="height: 10px">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{new[1].sp}}" aria-valuemin="0"
+                     aria-valuemax="100" ng-style="{width:(new[1].rprice/new[1].placement)*100+'%'}" style="height: 10px">
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-3 col-sm-3 col-lg-3">
+                <p><span>{{new[1].sp}}%</span></p>
+                <p>进度</p>
+            </div>
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+                <p><i class="fa fa-jpy" aria-hidden="true"></i>{{new[1].rprice}}</p>
+                <p>支持金额</p>
+            </div>
+
+
+            <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+                <p>{{new[0].rday}}</p>
+                <p>剩余天数</p>
+            </div>
+            <!--<div class="col-xs-2 col-md-2 col-sm-2 col-lg-2">
+                <p><i class="fa fa-jpy" aria-hidden="true"></i>{{hot[2].placement}}</p>
+                <p>总金额</p>
+            </div>-->
+
+        </div>
+    </div>
+</div>
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container" style="background: #fff; border-bottom: 1px solid #e4e4e4;">
+        <div class=" pdtp20">
+            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 ">
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 fw600">
+                    <dl class="dl-horizontal lh40">
+                        <dt><h4 class="lh80" style="font-weight: 800">卫视主推</h4></dt>
+
+                    </dl>
+                </div>
+
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                    <img src="{{unit[0].img}}" style="width: 18%; margin-right: 2%">
+                    <img src="{{unit[1].img}}" style="width: 18%; margin-right: 2%">
+                    <img src="{{unit[2].img}}" style="width: 18%; margin-right: 2%">
+                    <img src="{{unit[3].img}}" style="width: 18%; margin-right: 2%">
+                    <img src="{{unit[4].img}}" style="width: 18%;">
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</div>
